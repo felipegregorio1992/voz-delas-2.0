@@ -1,0 +1,2 @@
+-- No-op: EVENTS_MANAGE permission insert moved to 20260615000000_dynamic_roles_permissions
+-- (permissions table does not exist yet at this point in the migration sequence)

@@ -1,0 +1,2 @@
+-- AlterTable (already applied in 20260514000000_add_guard_psychologist_roles, no-op)
+-- ALTER TABLE `roles` MODIFY `name` ENUM('USER', 'ADMIN', 'OPERATOR', 'SECURITY', 'ATTENDANT', 'GUARD', 'PSYCHOLOGIST') NOT NULL;

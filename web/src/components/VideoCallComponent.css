@@ -1,0 +1,255 @@
+.video-call-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+}
+
+.video-call-permission-screen,
+.video-call-error,
+.video-call-ended {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.video-call-permission-screen h2,
+.video-call-error h2,
+.video-call-ended h2 {
+  margin-bottom: 1rem;
+  color: #9b59b6;
+}
+
+.privacy-notice {
+  background: rgba(155, 89, 182, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  max-width: 500px;
+}
+
+.permission-instructions {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  max-width: 500px;
+  text-align: left;
+}
+
+.permission-instructions h3 {
+  margin: 0 0 0.5rem 0;
+  color: #3498db;
+  font-size: 1rem;
+}
+
+.permission-instructions ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.permission-instructions li {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.permission-error {
+  background: rgba(231, 76, 60, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  color: #e74c3c;
+  max-width: 500px;
+  border-left: 4px solid #e74c3c;
+}
+
+.permission-help {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(231, 76, 60, 0.2);
+  font-size: 0.9rem;
+  color: #c0392b;
+}
+
+.btn-start-call {
+  background: #9b59b6;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-start-call:hover:not(:disabled) {
+  background: #8e44ad;
+}
+
+.btn-start-call:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.video-call-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.call-status {
+  font-weight: bold;
+}
+
+.call-timer {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.video-call-videos {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.remote-video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.remote-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.local-video-container {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #9b59b6;
+  background: #000;
+  z-index: 5;
+}
+
+.local-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2c2c2c;
+  color: #888;
+  font-size: 1.5rem;
+}
+
+.video-placeholder.small {
+  font-size: 2rem;
+}
+
+.video-call-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.control-btn.active {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.2);
+}
+
+.control-btn.inactive {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.2);
+}
+
+.control-btn.end-call {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  font-size: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+
+.control-btn.end-call:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .local-video-container {
+    width: 120px;
+    height: 90px;
+    bottom: 60px;
+    right: 10px;
+  }
+
+  .control-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+
+  .control-btn.end-call {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

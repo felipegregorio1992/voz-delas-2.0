@@ -1,0 +1,76 @@
+# Dependências
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build
+dist
+build
+*.tsbuildinfo
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+.env.production
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentação
+*.md
+!README.md
+docs
+
+# Testes
+coverage
+.nyc_output
+*.test.ts
+*.spec.ts
+test
+tests
+__tests__
+
+# Logs
+logs
+*.log
+
+# Temporários
+tmp
+temp
+.tmp
+.cache
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scripts de desenvolvimento
+scripts
+*.ps1
+*.sh
+
+# Outros
+.editorconfig
+.prettierrc
+.eslintrc.js
+jest.config.js
+# tsconfig.json e nest-cli.json são necessários para o build - NÃO excluir!
+
+# Uploads (não devem estar na imagem)
+uploads
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.webp

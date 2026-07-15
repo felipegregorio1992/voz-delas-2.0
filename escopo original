@@ -1,0 +1,418 @@
+🔐 PROTEÇÃO, DENÚNCIA E ATENDIMENTO IMEDIATO
+
+Registro de denúncias pelo aplicativo
+
+Geolocalização em tempo real da usuária
+
+Compartilhamento automático da localização durante ocorrências
+
+Encaminhamento imediato para a rede de apoio
+
+Integração com a Patrulha Maria da Penha (GMAP)
+
+Integração com a Delegacia Especializada de Atendimento à Mulher (DEAM)
+
+Integração com delegacia local, quando não houver DEAM
+
+Integração com a Defensoria Pública do Estado do Rio de Janeiro
+
+Integração com o Tribunal de Justiça do Estado do Rio de Janeiro (TJRJ)
+
+Solicitação digital de Medida Protetiva de Urgência (MPU)
+
+Acompanhamento do status da Medida Protetiva
+
+Botão do Pânico com acionamento rápido e silencioso
+
+Envio automático de alerta às forças de segurança
+
+Envio automático de alerta aos contatos de confiança
+
+Compartilhamento contínuo de localização após acionamento do pânico
+
+👥 REDE DE APOIO E ACOLHIMENTO
+
+Acesso à Sala Lilás Virtual
+
+Acolhimento psicológico remoto
+
+Acolhimento social remoto
+
+Atendimento humanizado e sigiloso
+
+Disponibilização de endereços dos Centros de Atendimento à Mulher (CEAMs)
+
+Disponibilização de contatos e horários dos CEAMs
+
+Orientações sobre direitos das mulheres
+
+Orientações sobre a rede municipal de proteção
+
+👨‍👩‍👧‍👦 CONTATOS DE CONFIANÇA
+
+Cadastro de até três pessoas de confiança
+
+Acionamento automático dos contatos em situação de risco
+
+Envio de localização e pedido de ajuda aos contatos cadastrados
+
+🛰️ MONITORAMENTO E PREVENÇÃO
+
+Geolocalização e acompanhamento de homens agressores (quando houver ordem judicial)
+
+Integração com sistemas de monitoramento de tornozeleira eletrônica
+
+Monitoramento de cumprimento de Medida Protetiva de Urgência
+
+Geração de alertas em caso de descumprimento da medida
+
+Integração com órgãos de segurança pública e justiça para fiscalização
+
+Integração com ações de olhar digital e monitoramento territorial
+
+Integração com a Secretaria de Segurança Cidadã
+
+🗂️ CONSULTA A INFORMAÇÕES E DADOS AUTORIZADOS
+
+Consulta a histórico criminal com base em dados públicos e legalmente autorizados
+
+Integração com o TJRJ para consulta processual autorizada
+
+Integração com a Polícia Civil do Estado do Rio de Janeiro
+
+Integração com a Polícia Militar do Estado do Rio de Janeiro
+
+Integração com o sistema SEI/DETRAN (convênio vigente com o TJRJ)
+
+Controle de acesso às informações sensíveis
+
+Registro de logs e auditoria de acessos
+
+Conformidade com a LGPD e princípios da proteção de dados
+
+💼 AUTONOMIA ECONÔMICA
+
+Marketplace exclusivo para mulheres empreendedoras de Maricá
+
+Cadastro de empreendedoras
+
+Divulgação de produtos e serviços
+
+Fortalecimento do empreendedorismo feminino
+
+Promoção da autonomia econômica como estratégia de enfrentamento à violência
+
+📊 GESTÃO PÚBLICA E ADMINISTRAÇÃO
+
+Painel administrativo (dashboard) para a Secretaria
+
+Acompanhamento de ocorrências em tempo real
+
+Monitoramento de atendimentos e fluxos
+
+Visualização de indicadores e métricas
+
+Apoio à tomada de decisão baseada em dados
+
+Gestão de usuários e perfis de acesso
+
+Gestão de permissões e níveis de segurança
+
+🤖 INTELIGÊNCIA ARTIFICIAL E DADOS
+
+Processamento de grande volume de informações
+
+Análise inteligente de dados
+
+Identificação de padrões e situações de risco
+
+Atendimento automatizado por IA (chatbot)
+
+Atendimento 24h, inclusive fora do horário da Secretaria
+
+Encaminhamento automático para atendimento humano
+
+Geração de dados estratégicos para políticas públicas
+
+Monitoramento e avaliação de políticas públicas
+
+Apoio à prevenção baseada em evidências
+
+🎨 IDENTIDADE, ACESSIBILIDADE E EXPERIÊNCIA DO USUÁRIO
+
+Nome próprio do aplicativo: Voz Delas
+
+Identidade visual própria
+
+Design inclusivo e representativo
+
+Acessibilidade digital (usabilidade ampliada)
+
+Linguagem clara e humanizada
+
+Foco em impacto social
+
+🔒 SEGURANÇA E CONFORMIDADE
+
+Comunicação segura entre sistemas integrados
+
+Criptografia de dados sensíveis
+
+Controle de consentimento da usuária
+
+Conformidade com legislações vigentes
+
+Integração segura entre sistemas institucionais
+
+
+
+
+```text
+Você é um engenheiro de software sênior (arquitetura + implementação). Gere um MONOREPO completo para o projeto “Voz Delas” com:
+
+- BACKEND: NestJS + TypeScript + Prisma + MySQL
+- MOBILE: Flutter (Dart)
+- Qualidade: lint/format, testes básicos, documentação, Docker para dev
+- Segurança e LGPD by design: autenticação robusta, RBAC, logs/auditoria, validações, rate limit
+- Escopo: MVP funcional (denúncia + geolocalização + botão do pânico + contatos de confiança + rede de apoio)
+
+⚠️ IMPORTANTE
+1) Entregue código REAL e executável, não apenas descrição.
+2) Preencha arquivos principais completos, com exemplos de uso.
+3) Use nomes de pastas e arquivos exatamente como especificado.
+4) Garanta que `docker compose up` suba MySQL + Adminer + Backend, e que o Flutter rode apontando para a API.
+5) Não use bibliotecas obscuras. Prefira escolhas populares e mantidas.
+6) Não implemente integrações reais com órgãos (TJRJ/DEAM/GMAP etc.) no MVP — apenas stubs/mocks com endpoints e registros de tentativa.
+
+========================================================
+A) ESTRUTURA DO REPOSITÓRIO (MONOREPO)
+========================================================
+Crie esta estrutura:
+
+/README.md
+/.editorconfig
+/.gitignore
+
+/backend
+  /README.md
+  /docker-compose.yml
+  /Dockerfile
+  /.env.example
+  /prisma
+    schema.prisma
+    seed.ts
+  /src
+    main.ts
+    app.module.ts
+    common/
+      config/
+        env.validation.ts
+      decorators/
+      filters/
+      guards/
+      interceptors/
+      middleware/
+      pipes/
+      utils/
+    modules/
+      auth/
+      users/
+      trusted-contacts/
+      incidents/
+      panic/
+      locations/
+      uploads/
+      support-network/
+      notifications/
+      admin/
+      audit/
+      integrations/
+
+/mobile
+  /README.md
+  /pubspec.yaml
+  /lib
+    main.dart
+    app.dart
+    core/
+      config/
+      storage/
+      network/
+      utils/
+    features/
+      auth/
+      home/
+      incidents/
+      panic/
+      trusted_contacts/
+      support_network/
+
+========================================================
+B) BACKEND (NestJS + Prisma + MySQL)
+========================================================
+
+B1) Dependências e padrões
+- NestJS + TypeScript
+- Prisma ORM
+- Swagger em `/docs`
+- class-validator + class-transformer
+- Helmet + CORS configurável
+- Rate limiting (login e pânico)
+- Logger estruturado (com requestId)
+- Auditoria persistida em `audit_logs`
+- Autenticação JWT (access) + refresh token (refresh armazenado com hash)
+- RBAC (roles: USER, ADMIN, OPERATOR, SECURITY)
+- Respostas padronizadas: { data, meta?, error? }
+- Tratamento global de erros (HttpExceptionFilter)
+- Versionamento de API: prefixo `/api/v1`
+
+B2) Banco de Dados (MySQL) – Prisma schema (obrigatório)
+Implemente no `schema.prisma` (incluindo índices e relacionamentos):
+
+- User (id, name, email?, phone?, passwordHash, createdAt, updatedAt, isActive)
+- RefreshToken (id, userId, tokenHash, expiresAt, createdAt, revokedAt?)
+- Role (id, name enum)
+- UserRole (userId, roleId)
+- TrustedContact (id, userId, name, phone, relationship?, createdAt)
+  - REGRA: máximo 3 por userId (validar na aplicação)
+- Incident (id, userId, type enum, description, status enum, createdAt)
+- IncidentLocation (id, incidentId, lat, lng, accuracy?, createdAt)
+- PanicEvent (id, userId, status enum (ACTIVE/ENDED), startedAt, endedAt?)
+- PanicLocation (id, panicEventId, lat, lng, accuracy?, createdAt)
+- Attachment (id, ownerType enum (INCIDENT/PANIC), ownerId, mimeType, size, url, createdAt)
+- SupportService (id, name, type enum (CEAM/DEAM/DEFENSORIA/OUTRO), phone?, address?, hours?, city?, createdAt)
+- AuditLog (id, userId?, action, entity, entityId?, ip?, userAgent?, detailsJson, createdAt)
+- IntegrationJob (id, provider enum (TJRJ/DEAM/GMAP/DEFENSORIA/SEI_DETRAN), payloadJson, status enum, attempts, lastError?, createdAt, updatedAt)
+
+Crie seed.ts com alguns SupportService (ex.: CEAMs/contatos úteis fictícios) e um usuário admin.
+
+B3) Módulos e endpoints (implementar controllers + services + DTOs)
+- Auth
+  - POST /api/v1/auth/register
+  - POST /api/v1/auth/login
+  - POST /api/v1/auth/refresh
+  - POST /api/v1/auth/logout
+- Users
+  - GET /api/v1/me
+  - PATCH /api/v1/me
+- Trusted Contacts
+  - GET /api/v1/me/trusted-contacts
+  - POST /api/v1/me/trusted-contacts
+  - PATCH /api/v1/me/trusted-contacts/:id
+  - DELETE /api/v1/me/trusted-contacts/:id
+- Incidents (Denúncias)
+  - POST /api/v1/incidents
+  - GET /api/v1/incidents/:id (dona do registro ou papel staff)
+  - GET /api/v1/admin/incidents (ADMIN/OPERATOR)
+  - POST /api/v1/incidents/:id/locations (registrar localização do evento)
+- Panic (Botão do pânico)
+  - POST /api/v1/panic (cria PanicEvent ACTIVE)
+  - POST /api/v1/panic/:id/locations (stream de localização)
+  - POST /api/v1/panic/:id/end (encerra)
+  - Ao acionar pânico: criar AuditLog + “enfileirar” IntegrationJobs (stubs) + criar registros de “notificação enviada” para contatos
+- Support Network
+  - GET /api/v1/support-services
+- Uploads
+  - POST /api/v1/uploads (retornar URL simulada/local; validar tipo e tamanho; salvar Attachment)
+- Notifications (MVP stub)
+  - Nenhum provedor real, mas registrar em AuditLog e imprimir no console.
+- Integrations (MVP stub)
+  - POST /api/v1/integrations/:provider/test (criar IntegrationJob e marcar como SUCCESS/FAILED via mock)
+
+B4) Regras de negócio críticas
+- Limitar TrustedContacts a 3 por usuário
+- Validar phone/email obrigatórios no register (ao menos um)
+- Ao criar Incident e PanicEvent, salvar AuditLog
+- Rate limit: login e panic (ex.: 5/min para login e 10/min para panic por IP)
+- Retenção (comentário no código + pronto para configurar): não apagar agora, mas prepare campo/serviço
+
+B5) Docker e execução
+- `backend/docker-compose.yml`: MySQL + Adminer + API
+- `.env.example` com:
+  - DATABASE_URL
+  - JWT_ACCESS_SECRET, JWT_REFRESH_SECRET
+  - JWT_ACCESS_EXPIRES_IN, JWT_REFRESH_EXPIRES_IN
+  - CORS_ORIGINS
+  - PORT
+- README do backend com comandos:
+  - instalar deps
+  - rodar migrations
+  - seed
+  - subir docker
+  - abrir /docs
+
+B6) Testes mínimos
+- Teste de AuthService (login/register)
+- Teste do TrustedContactsService (limite 3)
+- Teste do Panic (criar e encerrar)
+
+========================================================
+C) MOBILE (Flutter)
+========================================================
+
+C1) Padrões e libs
+- Flutter estável
+- Gerenciamento de estado: Riverpod (ou Bloc) — escolha 1 e aplique consistente
+- HTTP: Dio
+- Storage seguro: flutter_secure_storage
+- Rotas: go_router
+- Acessibilidade: textos escaláveis, contraste básico e feedbacks claros
+
+C2) Configuração
+- flavors: dev/hml/prod (ou pelo menos env por arquivo)
+- `core/config/api_config.dart` com baseUrl
+- Interceptor Dio: injeta access token; refresh automático quando 401
+
+C3) Telas do MVP
+- Auth:
+  - Login
+  - Cadastro
+- Home:
+  - Botão “Registrar Denúncia”
+  - Botão “Botão do Pânico” (destaque)
+  - Acesso “Contatos de confiança”
+  - “Rede de apoio (CEAMs/contatos)”
+- Denúncia:
+  - Form: tipo, descrição
+  - Botão “Enviar” (POST /incidents)
+  - Após criar: iniciar envio periódico de localização por 60s (simples)
+- Pânico:
+  - Botão grande “Acionar” (POST /panic)
+  - Ao acionar: enviar localização a cada 5s (POST /panic/:id/locations)
+  - Botão “Encerrar” (POST /panic/:id/end)
+- Contatos de confiança:
+  - CRUD até 3
+- Rede de apoio:
+  - Lista de SupportServices (GET /support-services) com telefone/endereço
+
+C4) Geolocalização
+- Use pacote de geolocalização popular (ex.: geolocator)
+- Solicite permissão corretamente
+- Enviar (lat,lng,accuracy,timestamp)
+
+C5) README do mobile
+- Como configurar baseUrl
+- Como rodar
+- Como logar com usuário seed
+
+========================================================
+D) DOCUMENTAÇÃO E ENTREGÁVEIS
+========================================================
+1) README raiz com passos:
+- subir backend via docker-compose
+- rodar prisma migrate + seed
+- iniciar Flutter
+2) Documente as decisões: segurança, LGPD, auditoria e limites do MVP
+3) Inclua exemplos de request/response no README ou via Swagger
+
+========================================================
+E) O QUE EU QUERO QUE VOCÊ ENTREGUE AGORA
+========================================================
+- Gere todos os arquivos principais com conteúdo real
+- Gere o prisma schema e seed funcional
+- Gere os módulos NestJS com endpoints e DTOs
+- Gere o Flutter com as telas e integração com API
+- Garanta que o projeto compile/rode seguindo o README
+
+Comece criando o monorepo completo e escreva o código.
+```
